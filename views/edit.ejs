@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs")%>
+<body>
+<div class="modal-content">
+    <form id="blogForm" action="/apply/<%= locals.id %>" method="POST">
+        <label for="title">Título:</label>
+        <input type="text" id="title" name="title" required>
+        <label for="content">Contenido:</label>
+        <textarea id="content" name="content" required></textarea>
+        <label for="image">URL de la Imagen:</label>
+        <input type="text" id="image" name="image" required>
+
+        <input type="submit" action="/apply/<%= locals.id %>" method="POST" href="/apply/<%= locals.id %>">EDIT</button>
+    </form>
+</div>
+</body>
+<%- include("partials/footer.ejs")%>

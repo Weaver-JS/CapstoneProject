@@ -1,0 +1,17 @@
+<div class="blog-entry">
+    <img class="img" src=<%=entry.image%> alt="Imagen del artículo">
+
+    <h2><%=entry.title%></h2>
+    <div class="blog-entry-content">
+        <p><%=entry.content%></p>
+    </div>
+    
+    <button type="button" action="/edit" method="POST" onclick="submitForm()">
+        <a class=blog-entry-content  method="POST" href="/edit/<%= entry.id %>"><LI> edit </LI></a>
+    </button>
+
+    <form id="form" action="/delete/<%= entry.id %>"  method="POST">
+        <button type="submit">Delete</button>
+      </form>
+
+</div>
