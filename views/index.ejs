@@ -1,0 +1,9 @@
+<%- include("partials/header.ejs") %>
+<div class="entradas-blog">
+<% if(locals.entries){ %>
+    <%for(var i = 0; i<entries.length; ++i){%>
+        <%- include("partials/blogItem.ejs", {entry : entries[i]}); %>
+    <%}%>
+<%}%>
+</div>
+<%- include("partials/footer.ejs") %>
